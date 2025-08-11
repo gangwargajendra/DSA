@@ -15,6 +15,7 @@ vector<int> topoSortByBFS(vector<int> adj[] , int V){
 
     queue<int> q;
     // we can also skip visited vector
+    // there is no need fo vis vector so we can remove it totally
     vector<int> vis(V , 0);
     for(int i=0 ; i<V ; i++){
         if(inDegree[i] == 0){
