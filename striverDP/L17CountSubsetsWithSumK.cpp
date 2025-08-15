@@ -6,8 +6,8 @@ using namespace std;
 
 // using memoizatoin
 int f(int index , int target,vector<int> &arr, vector<vector<int>> &DP){
-    if(target == 0) return 1;
-    if(index == 0) return (arr[0] == target) ? 1 :0;
+    if(index < 0) 
+        return target == 0;
 
     if(DP[index][target] != -1) return DP[index][target];
 
